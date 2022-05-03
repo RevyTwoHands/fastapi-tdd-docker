@@ -4,8 +4,8 @@ FROM python:3.10.1-slim-buster
 # set working directory
 WORKDIR /usr/src/app
 
-#set environment variables
-ENV PYTHONDONTWRITEBYCODE 1
+# set environment variables
+ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
 # install system dependencies
@@ -26,4 +26,4 @@ COPY ./entrypoint.sh .
 RUN chmod +x /usr/src/app/entrypoint.sh
 
 # run entrypoint.sh
-ENTRYPOINT [ "/usr/src/app/entrypoint.sh" ]
+ENTRYPOINT ["/usr/src/app/entrypoint.sh"]
