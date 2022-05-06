@@ -2,3 +2,9 @@
 tortoise_orm = "app.db.TORTOISE_ORM"
 location = "./migrations"
 src_folder = "./."
+[tool.black]
+exclude = "env/"
+[tool.isort]
+skip = "env/"
+[tool.pytest.ini_options]
+norecursedirs = "env/"
